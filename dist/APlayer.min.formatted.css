@@ -1,6 +1,7 @@
 .aplayer-theme-dark {
     --bg-color: #0c0c0c;
     --miniswitcher-bg-color: #0c0c0c;
+    --controller-icon-color: #fff;
     --li-light-color: #434343;
     --li-hover-color: #3d3d3d;
     --li-index-color: #ddd;
@@ -12,6 +13,7 @@
 .aplayer-theme-light {
     --bg-color: #fff;
     --miniswitcher-bg-color: #fff;
+    --controller-icon-color: #000;
     --li-light-color: #e9e9e9;
     --li-hover-color: #efefef;
     --li-index-color: #666;
@@ -447,7 +449,7 @@
 }
 
 .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon:hover path {
-    fill: #000
+    fill: var(--controller-icon-color)
 }
 
 .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-menu,
@@ -707,7 +709,7 @@
 }
 
 .aplayer .aplayer-miniswitcher .aplayer-icon:hover path {
-    fill: #000
+    fill: var(--controller-icon-color)
 }
 
 @-webkit-keyframes aplayer-roll {
