@@ -2,12 +2,18 @@
     --bg-color: #0c0c0c;
     --li-light-color: #434343;
     --li-hover-color: #3d3d3d;
+    --li-index-color: #ddd;
+    --li-title-color: #ddd;
+    --li-author-color: #777;
 }
 
 .aplayer-theme-light {
     --bg-color: #fff;
     --li-light-color: #e9e9e9;
     --li-hover-color: #efefef;
+    --li-index-color: #666;
+    --li-title-color: #4a4a4a;
+    --li-author-color: #777;
 }
 
 .aplayer {
@@ -107,7 +113,7 @@
     right: 0;
     margin: 0;
     z-index: 99;
-    background: #fff;
+    background: var(--bg-color);
     padding-right: 18px;
     transition: all .3s ease;
     max-width: 400px
@@ -638,13 +644,17 @@
 }
 
 .aplayer .aplayer-list ol li .aplayer-list-index {
-    color: #666;
+    color: var(--li-index-color);
     margin-right: 12px;
     cursor: pointer
 }
 
+.aplayer .aplayer-list ol li .aplayer-list-title {
+    color: var(--li-title-color);
+}
+
 .aplayer .aplayer-list ol li .aplayer-list-author {
-    color: #666;
+    color: var(--li-author-color);
     float: right;
     cursor: pointer
 }
