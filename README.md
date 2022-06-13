@@ -43,6 +43,6 @@ Now the repo is ready for development and test.
 
 The scripts and code of demo are almost located in `demo/` subfolder. You can execute `npm run start` in terminal to launch the demo. Note that it will open in browser by default.
 
-In the original repo, most resource links can't be reached for restriction (will return 403 error). It will be fixed later.
+In the original repo, most resource links can't be reached for restriction (will return 403 error). You can download essential assets from [here](https://github.com/LittleYe233/APlayer/releases/tag/demo_assets).
 
 ## Major updates
