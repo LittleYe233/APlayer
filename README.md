@@ -63,6 +63,6 @@ devServer: {
 
 Change the value of `open` to `true`.
 
-In the original repo, most resource links can't be reached for restriction (will return 403 error). You can download essential assets from [here](https://github.com/LittleYe233/APlayer/releases/tag/demo_assets).
+In the original repo, most resource links can't be reached for restriction (will return 403 error). You can download essential assets from [here](https://github.com/LittleYe233/APlayer/releases/tag/demo_assets-1.1.0).
 
 ## Major updates
