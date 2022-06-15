@@ -208,8 +208,8 @@ const ap8 = new APlayer({
     fixed: true,
 });
 $.ajax({
-    url: 'https://api.i-meto.com/meting/api?server=netease&type=playlist&id=35798529',
+    url: '/assets/playlist.json',
     success: function (list) {
-        ap8.list.add(JSON.parse(list));
+        ap8.list.add(list);
     }
 });
