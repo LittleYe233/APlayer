@@ -188,19 +188,17 @@ class APlayer {
         this.on('ended', () => {
             if (this.options.loop === 'none') {
                 if (this.options.order === 'list') {
+                    this.list.switch((this.list.index + 1) % this.list.audios.length);
                     if (this.list.index < this.list.audios.length - 1) {
-                        this.list.switch((this.list.index + 1) % this.list.audios.length);
                         this.play();
                     } else {
-                        this.list.switch((this.list.index + 1) % this.list.audios.length);
                         this.pause();
                     }
                 } else if (this.options.order === 'random') {
+                    this.skipForward();
                     if (this.randomOrder.indexOf(this.list.index) < this.randomOrder.length - 1) {
-                        this.list.switch(this.nextIndex());
                         this.play();
                     } else {
-                        this.list.switch(this.nextIndex());
                         this.pause();
                     }
                 }
