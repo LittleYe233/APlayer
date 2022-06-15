@@ -41,7 +41,27 @@ Now the repo is ready for development and test.
 
 ## Demo
 
-The scripts and code of demo are almost located in `demo/` subfolder. You can execute `npm run start` in terminal to launch the demo. Note that it will open in browser by default.
+The scripts and code of demo are almost located in `demo/` subfolder. You can execute `npm run start` in terminal to launch the demo.
+
+Note that it won't open in browser by default. To change this behavior, edit `webpack/dev.config.js` and find `devServer` field:
+
+```js
+devServer: {
+    compress: true,
+    contentBase: path.resolve(__dirname, '..', 'demo'),
+    clientLogLevel: 'none',
+    quiet: false,
+    open: false,
+    historyApiFallback: {
+        disableDotRule: true,
+    },
+    watchOptions: {
+        ignored: /node_modules/,
+    },
+},
+```
+
+Change the value of `open` to `true`.
 
 In the original repo, most resource links can't be reached for restriction (will return 403 error). You can download essential assets from [here](https://github.com/LittleYe233/APlayer/releases/tag/demo_assets).
 

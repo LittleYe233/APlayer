@@ -86,7 +86,7 @@ module.exports = {
         contentBase: path.resolve(__dirname, '..', 'demo'),
         clientLogLevel: 'none',
         quiet: false,
-        open: true,
+        open: false,
         historyApiFallback: {
             disableDotRule: true,
         },
