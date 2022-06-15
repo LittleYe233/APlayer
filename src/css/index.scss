@@ -81,7 +81,6 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
         margin: 0;
         z-index: 99;
         overflow: visible;
-        max-width: 400px;
         box-shadow: none;
 
         .aplayer-list {
@@ -100,7 +99,7 @@ $aplayer-height-lrc: $aplayer-height + $lrc-height - 6;
             background: #fff;
             padding-right: 18px;
             transition: all 0.3s ease;
-            max-width: 400px;
+            width: calc(100% - 18px);
         }
 
         .aplayer-lrc {

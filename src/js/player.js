@@ -63,7 +63,6 @@ class APlayer {
 
         if (this.options.fixed) {
             this.container.classList.add('aplayer-fixed');
-            this.template.body.style.width = this.template.body.offsetWidth - 18 + 'px';
         }
         if (this.options.mini) {
             this.setMode('mini');
