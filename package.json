@@ -1,6 +1,6 @@
 {
     "name": "aplayer-remake",
-    "version": "1.11.0",
+    "version": "1.11.1",
     "description": "Wow, remake of the such beautiful html5 music player",
     "main": "dist/APlayer.min.js",
     "style": "dist/APlayer.min.css",
