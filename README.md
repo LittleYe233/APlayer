@@ -6,6 +6,21 @@
 
 **Visit the original repository for further information. Here are only differences from that.**
 
+## Install
+
+### NPM
+
+Note that the name of this package is "aplayer-remake".
+
+## Changed APIs
+
+### `ap.list.add(audios, index = null)`
+
+**Parameters**:
+
+-   `audios`: audio or list of audios
+-   `index`: position to be added
+
 ## Development
 
 ### Install dependencies
@@ -66,3 +81,9 @@ Change the value of `open` to `true`.
 In the original repo, most resource links can't be reached for restriction (will return 403 error). You can download essential assets from [here](https://github.com/LittleYe233/APlayer/releases/tag/demo_assets-1.1.0).
 
 ## Major updates
+
+-   Add more descriptions on development guide and demo.
+-   Replace unreachable links.
+-   Expand panel of fixed player to full width of the current webpage.
+-   Allow to add songs at any index of playlist.
+-   Some APIs are added, removed and changed.
