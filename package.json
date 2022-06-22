@@ -1,9 +1,12 @@
 {
-    "name": "aplayer",
-    "version": "1.10.1",
-    "description": "Wow, such a beautiful html5 music player",
+    "name": "aplayer-remake",
+    "version": "1.11.0",
+    "description": "Wow, remake of the such beautiful html5 music player",
     "main": "dist/APlayer.min.js",
     "style": "dist/APlayer.min.css",
+    "engines": {
+        "node": ">=16.0.0"
+    },
     "scripts": {
         "start": "npm run dev",
         "build": "cross-env NODE_ENV=production webpack --config webpack/prod.config.js --progress --display-error-details --colors",
@@ -17,7 +20,7 @@
         "dist"
     ],
     "repository": {
-        "url": "git+https://github.com/DIYgod/APlayer.git",
+        "url": "git+https://github.com/LittleYe233/APlayer.git",
         "type": "git"
     },
     "keywords": [
@@ -28,12 +31,12 @@
     "gitHooks": {
         "pre-commit": "npm run format:staged"
     },
-    "author": "DIYgod",
+    "author": "LittleYe233",
     "license": "MIT",
     "bugs": {
-        "url": "https://github.com/DIYgod/APlayer/issues"
+        "url": "https://github.com/LittleYe233/APlayer/issues"
     },
-    "homepage": "https://github.com/DIYgod/APlayer#readme",
+    "homepage": "https://github.com/LittleYe233/APlayer#readme",
     "devDependencies": {
         "@babel/core": "^7.6.0",
         "@babel/preset-env": "^7.4.5",
