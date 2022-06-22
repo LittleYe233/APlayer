@@ -55,9 +55,12 @@ class List {
         }
     }
 
-    add(audios) {
+    add(audios, index = null) {
+        index = index === null ? this.audios.length : index;
+
         this.player.events.trigger('listadd', {
             audios: audios,
+            index: index,
         });
 
         if (Object.prototype.toString.call(audios) !== '[object Array]') {
@@ -74,13 +77,31 @@ class List {
         const wasSingle = !(this.audios.length > 1);
         const wasEmpty = this.audios.length === 0;
 
-        this.player.template.list.innerHTML += tplListItem({
+        this.audios.splice(index, 0, ...audios);
+        // /**
+        //  * @todo There can be an optimization here.
+        //  * @note They are not DOM elements, but arguments to generate elements.
+        //  */
+        // this.audioListItems.splice(index, 0, ...this.audios.map((v, i) => ({
+        //     // theme: this.player.options.theme,
+        //     theme: v.theme,
+        //     audio: [v],
+        //     index: index + i
+        // })));
+        // for (let i = index + audios.length; i < this.audios.length; ++i) {
+        //     this.audioListItems[i] = index + audios.length + i;
+        // }
+        this.player.template.list.innerHTML = tplListItem({
             theme: this.player.options.theme,
-            audio: audios,
-            index: this.audios.length + 1,
+            audio: this.audios,
+            index: 1,
         });
-
-        this.audios = this.audios.concat(audios);
+        /** @note Consider it more later. */
+        // this.player.template.list.innerHTML += tplListItem({
+        //     theme: this.player.options.theme,
+        //     audio: audios,
+        //     index: this.audios.length + 1,  // No. of the first element
+        // });
 
         if (wasSingle && this.audios.length > 1) {
             this.player.container.classList.add('aplayer-withlist');
